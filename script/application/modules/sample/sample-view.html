@@ -1,0 +1,32 @@
+<div class="container-fluid" style="margin-top: 60px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="height: 60px;">
+					<b>Sample Data ID: {{sampleId}}</b>
+					<div class="pull-right">
+						<button class="btn btn-default" ng-click="back()">
+							<i class="glyphicon glyphicon-share"></i> Back
+						</button>
+						<button class="btn btn-primary" ui-sref="sample-edit({id: sampleId, page: currentPage})">
+							<i class="glyphicon glyphicon-pencil"></i> Edit
+						</button>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Name</label>
+								<div class="col-sm-10">
+									<p class="form-control-static">{{sample.name}}</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

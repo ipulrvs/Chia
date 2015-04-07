@@ -1,0 +1,41 @@
+<style type="text/css">
+	.landing-page {
+		height: 676px;
+		width: 100%;
+		background: url('script/assets/images/landing-page.jpg') no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.h1 {
+		font-size: 5em;
+		font-weight: bold;
+		opacity: 0.9;
+		text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+		margin-top: 480px;
+	}
+
+	.white {
+		font-weight: bold;
+		text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+	}
+</style>
+
+<div class="container-fluid landing-page">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center text-default h1">Welcome to Chia !</h1>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h4 class="text-center"><b>Chia</b> is Boilerplate made by <b>{{welcome}}</b> ! <a ui-sref="sample({page: 1})" class="btn btn-default">Sample App</a></h4> 
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid" style="margin-top: 50px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<b>Sample Form</b>
+				</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Name</label>
+							<input type="text" class="form-control" placeholder="Name" name="name" ng-model="sample.name"/>	
+						</div>
+					</div>
+					<div class="col-md-6"></div>
+				</div>
+				<div class="panel-footer" style="height: 60px;">
+					<div class="pull-right">
+						<button ng-click="back()" class="btn btn-danger">
+							<i class="glyphicon glyphicon-remove"></i> Cancel
+						</button>
+						<button ng-click="save()" class="btn btn-success">
+							<i class="glyphicon glyphicon-ok"></i> Create
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

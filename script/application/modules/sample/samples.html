@@ -1,0 +1,70 @@
+<style type="text/css">
+	.pretty-cell{
+		text-align: center; 
+		vertical-align: middle;
+	}
+</style>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Welcome <b>Sample Application</b>!</h1>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<b>{{pageTitle}}</b>
+				</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<button class="btn btn-default" ng-click="back()">
+							<i class="glyphicon glyphicon-share"></i> Back
+						</button>
+						<button class="btn btn-success" ui-sref="sample-add({page: currentPage})">
+							<i class="glyphicon glyphicon-edit"></i> Create
+						</button>
+					</div>
+					<div class="col-md-6">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search for..." ng-model="find">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" ng-click="search(searchDefault)"><i class=" glyphicon glyphicon-search"></i></button>
+							</span>
+					    </div>
+					</div>
+				</div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th style="width: 50px;" class="pretty-cell">No</th>
+							<th style="width: 200px;">Id</th>
+							<th>Name</th>
+							<th style="width: 180px;">Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="sample in samples">
+							<td class="pretty-cell">{{$index + 1 + pageNumber}}</td>
+							<td class="pretty-cell">{{sample.id}}</td>
+							<td>{{sample.name}}</td>
+							<td>
+								<button type="button" class="btn-sm btn btn-primary"ui-sref="sample-view({id: sample.id, page: currentPage})">
+									<i class="glyphicon glyphicon-list-alt"></i> View
+								</button>
+								<button type="button" class="btn-sm btn btn-danger" ng-click="destroy({id: sample.id})">
+									<i class="glyphicon glyphicon-trash"></i> Remove
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="panel-footer">
+					<nav>
+						<ul class="pagination" ng-repeat="pagination in paginations">
+							<li ng-class="{ 'active': $index == selected }"><a ui-sref="sample({page: pagination.page})">{{pagination.page}}</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
